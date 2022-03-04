@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="styles.css">
   <title>Tailwind</title>
 </head>
-<body>
+<body >
     <!-- EACH OF THESE DIVS USE A DIFFERENT FLEX - OBSERVE THE DIFFERENCES IN THE BROWSER -->
     <div class="flex bg-yellow-300 w-auto">
         <!-- Use flex-initial to allow a flex item to shrink but not grow, taking into account its initial size -->
@@ -60,19 +60,66 @@
       <div class="col-span-3 h-20 bg-red-900">9</div>
   </div>
   <br>
-  <!-- CREATING A GRID LAYOUT WITH 5 ROWS & A GAP SIZE OF 8-->
+  <!-- CREATING A GRID LAYOUT WITH 5 ROWS W/ A GRID FLOW OF COLUMNS & A GAP SIZE OF 8-->
   <div class="bg-red-500 w-auto grid grid-rows-5 grid-flow-col gap-8">
-    <div class="row-span-2 h-20 bg-blue-100">1</div>
+    <div class="h-20 bg-blue-100">1</div>
     <div class="h-20 bg-blue-200">2</div>
     <div class="h-20 bg-blue-300">3</div>
 
-    <div class="row-span-2 h-20 bg-blue-400">4</div>
+    <div class="h-20 bg-blue-400">4</div>
     <div class="h-20 bg-blue-500">5</div>
     <div class="h-20 bg-blue-600">6</div>
 
     <div class="h-20 bg-blue-700">7</div>
     <div class="h-20 bg-blue-800">8</div>
     <div class="h-20 bg-blue-900">9</div>
+</div>
+<br>
+  <!-- CREATING A GRID LAYOUT WITH 5 COLUMNS W/ A GRID FLOW OF ROWS & A GAP SIZE OF 1-->
+  <div class="bg-green-500 w-auto grid grid-cols-5 grid-flow-row gap-1">
+    <div class="h-20 bg-yellow-100">1</div>
+    <div class="h-20 bg-yellow-200">2</div>
+    <div class="h-20 bg-yellow-300">3</div>
+
+    <div class="h-20 bg-yellow-400">4</div>
+    <div class="h-20 bg-yellow-500">5</div>
+    <div class="h-20 bg-yellow-600">6</div>
+
+    <div class="h-20 bg-yellow-700">7</div>
+    <div class="h-20 bg-yellow-800">8</div>
+    <div class="h-20 bg-yellow-900">9</div>
+</div>
+<br>
+<!-- CREATING A GRID LAYOUT WITH 5 COLUMNS W/ A GAP SIZE OF 2 BETWEEN EACH X-AXIS AND SIZE 4 FOR Y-AXIS AND JUSTIFYING ITEMS TO BE CENTERED-->
+<div class="bg-blue-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4 justify-items-center">
+  <div class="h-20 w-20 bg-green-100">1</div>
+  <div class="h-20 w-20 bg-green-200">2</div>
+  <div class="h-20 w-20 bg-green-300">3</div>
+
+  <div class="h-20 w-20 bg-green-400">4</div>
+  <div class="h-20 w-20 bg-green-500">5</div>
+  <div class="h-20 w-20 bg-green-600">6</div>
+
+  <div class="h-20 w-20 bg-green-700">7</div>
+  <div class="h-20 w-20 bg-green-800">8</div>
+  <div class="h-20 w-20 bg-green-900">9</div>
+</div>
+<br>
+  <!-- JUSTIFYING ITEMS SPECIFICALLY INSTEAD OF AS A WHOLE -->
+<div class="bg-red-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4">
+  <!-- USING JUSTIFY SELF TO SET THE SPECIFIC DIV TO WHAT YOU WANT ITS POSITION TO BE -->
+  <div class="h-20 w-20 bg-blue-100 justify-self-end">1</div>
+  <div class="h-20 w-20 bg-blue-200">2</div>
+  <div class="h-20 w-20 bg-blue-300">3</div>
+
+  <div class="h-20 w-20 bg-blue-400">4</div>
+  <div class="h-20 w-20 bg-blue-500">5</div>
+  <div class="h-20 w-20 bg-blue-600">6</div>
+
+  <!-- USING JUSTIFY-SELF-STRETCH TO MAKE THIS DIV SPAN THE ENTIRE WIDTH-->
+  <div class="h-20 bg-blue-700 justify-self-stretch">7</div>
+  <div class="h-20 w-20 bg-blue-800">8</div>
+  <div class="h-20 w-20 bg-blue-900">9</div>
 </div>
 </body>
 </html>
