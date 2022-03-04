@@ -5,10 +5,42 @@
   <title>Tailwind</title>
 </head>
 <body>
-<div class="flex flex-row-reverse bg-yellow-500 w-auto">
-  <div class="h-10 w-10 bg-red-500">1</div>
-  <div class="h-10 w-10 bg-blue-500">2</div>
-  <div class="h-10 w-10 bg-green-500">3</div>
+    <!-- EACH OF THESE DIVS USE A DIFFERENT FLEX - OBSERVE THE DIFFERENCES IN THE BROWSER -->
+    <div class="flex bg-yellow-300 w-auto">
+        <!-- Use flex-initial to allow a flex item to shrink but not grow, taking into account its initial size -->
+        <div class="flex-initial w-80 bg-red-300">1</div>
+        <div class="flex-initial w-80 bg-blue-300">2</div>
+        <div class="flex-initial w-80 bg-green-300">3</div>
+    </div>
+    <div class="flex bg-yellow-400 w-auto">
+      <!-- Use flex-auto to allow a flex item to grow and shrink, taking into account its initial size -->
+      <div class="flex-auto w-80 bg-red-400">4</div>
+      <div class="flex-auto w-80 bg-blue-400">5</div>
+      <div class="flex-auto w-80 bg-green-400">6</div>
+  </div>
+  <div class="flex bg-yellow-500 w-auto">
+    <!-- Use flex-none to prevent a flex item from growing or shrinking -->
+    <div class="flex-none w-80 bg-red-500">7</div>
+    <div class="flex-none w-80 bg-blue-500">8</div>
+    <div class="flex-none w-80 bg-green-500">9</div>
+</div>
+<div class="flex bg-yellow-600 w-auto">
+    <!-- Use grow to allow a flex item to grow to fill any available space -->
+    <div class="flex-grow w-80 bg-red-600">10</div>
+    <div class="flex-grow w-80 bg-blue-600">11</div>
+    <div class="flex-grow w-80 bg-green-600">12</div>
+</div>
+<div class="flex bg-yellow-700 w-auto">
+    <!-- Use shrink to allow a flex item to shrink if needed -->
+    <div class="flex-shrink w-80 bg-red-700">13</div>
+    <div class="flex-shrink w-80 bg-blue-700">14</div>
+    <div class="flex-shrink w-80 bg-green-700">15</div>
+</div>
+<div class="flex bg-yellow-800 w-auto">
+    <!-- Utilities for controlling the order of flex and grid items in a numerical order based on what is assigned -->
+    <div class="order-2 w-80 bg-red-800">13</div>
+    <div class="order-1 w-80 bg-blue-800">14</div>
+    <div class="order-3 w-80 bg-green-800">15</div>
 </div>
 </body>
 </html>
