@@ -121,5 +121,26 @@
   <div class="h-20 w-20 bg-blue-800">8</div>
   <div class="h-20 w-20 bg-blue-900">9</div>
 </div>
+<br>
+  <!-- SETTING THE MARGIN AND PADDING TO 10 -->
+  <div class="bg-blue-500 m-10 p-10">
+      <!-- SETTING THE PADDING TO 10 -->
+      <div class="bg-yellow-500 p-10">This is the inner div</div>
+  </div>
+  <br>
+  <!-- STYLING THE FONT SIZE TO BE LARGER AND WITH A THIN STYLING ALIGNED CENTER WITH A TEXT COLOR OF YELLOW AND OPACITY SET AT 80 ALL UPPERCASE https://tailwindcss.com/docs/font-weight -->
+  <div class="text-lg font-thin text-center text-yellow-600 text-opacity-80 uppercase">This is a heading!</div>
+  <br>  
+        <!-- CREATING A GREEN BUTTON W/ MARGIN OF 20 AND PADDING OF 5 THATS ROUNDED AND HAS A RED BORDER https://tailwindcss.com/docs/border-width -->
+      <button class="bg-green-500 m-20 p-5 rounded border-4 border-red-600">Click Here</button>
+<br>
+    <!-- ADDING A SHADOW TO THE BUTTON ELEMENT  -->
+  <button class="bg-blue-500 m-20 p-5 shadow-2xl">Click Here</button>
+    <!-- EXAMPLES OF RESPONSIVE BREAKPOINTS https://tailwindcss.com/docs/responsive-design#customizing-breakpoints-->
+    <!-- @2XL SCREEN SIZE TEXT WILL BE 4XL WHEN SMALLER WILL REVERT TO STANDARD SIZE, @XL SCREEN SIZE TEXT COLOR WILL BE YELLOW, FOR SCREEN SIZE LG, FOR SCREEN SIZES OF MD TEXT WILL BE GREEN, FOR SCREENS SMALLER THAN MD IT WILL BE DEFAULT TEXT COLOR OF WHITE -->
+    <h1 class="2xl:text-4xl xl:text-yellow-500 lg:text-red-500 md:text-green-500">Heading</h1>
+    <br>
+      <!-- EXAMPLE OF THE FONT SIZE CHANGING AT EACH SCREEN SIZE BREAK -->
+    <h1 class="2xl:text-8xl xl:text-4xl lg:text-2xl md:text-lg">Heading</h1>
 </body>
 </html>

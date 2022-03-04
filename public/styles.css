@@ -50,7 +50,8 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
-  background: black;
+  background: rgb(219, 219, 219);
+  color: white;
 }
 
 /**
