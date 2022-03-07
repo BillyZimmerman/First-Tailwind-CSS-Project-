@@ -4,9 +4,167 @@
   <link rel="stylesheet" href="styles.css">
   <title>Tailwind</title>
 </head>
-
 <body >
-  
-</body>
+    <!-- EACH OF THESE DIVS USE A DIFFERENT FLEX - OBSERVE THE DIFFERENCES IN THE BROWSER -->
+    <div class="flex bg-yellow-300 w-auto">
+        <!-- Use flex-initial to allow a flex item to shrink but not grow, taking into account its initial size -->
+        <div class="flex-initial w-80 bg-red-300">1</div>
+        <div class="flex-initial w-80 bg-blue-300">2</div>
+        <div class="flex-initial w-80 bg-green-300">3</div>
+    </div>
+    <div class="flex bg-yellow-400 w-auto">
+      <!-- Use flex-auto to allow a flex item to grow and shrink, taking into account its initial size -->
+      <div class="flex-auto w-80 bg-red-400">4</div>
+      <div class="flex-auto w-80 bg-blue-400">5</div>
+      <div class="flex-auto w-80 bg-green-400">6</div>
+  </div>
+  <div class="flex bg-yellow-500 w-auto">
+    <!-- Use flex-none to prevent a flex item from growing or shrinking -->
+    <div class="flex-none w-80 bg-red-500">7</div>
+    <div class="flex-none w-80 bg-blue-500">8</div>
+    <div class="flex-none w-80 bg-green-500">9</div>
+</div>
+<div class="flex bg-yellow-600 w-auto">
+    <!-- Use grow to allow a flex item to grow to fill any available space -->
+    <div class="flex-grow w-80 bg-red-600">10</div>
+    <div class="flex-grow w-80 bg-blue-600">11</div>
+    <div class="flex-grow w-80 bg-green-600">12</div>
+</div>
+<div class="flex bg-yellow-700 w-auto">
+    <!-- Use shrink to allow a flex item to shrink if needed -->
+    <div class="flex-shrink w-80 bg-red-700">13</div>
+    <div class="flex-shrink w-80 bg-blue-700">14</div>
+    <div class="flex-shrink w-80 bg-green-700">15</div>
+</div>
+<div class="flex bg-yellow-800 w-auto">
+    <!-- Utilities for controlling the order of flex and grid items in a numerical order based on what is assigned -->
+    <div class="order-2 w-80 bg-red-800">13</div>
+    <div class="order-1 w-80 bg-blue-800">14</div>
+    <div class="order-3 w-80 bg-green-800">15</div>
+</div>
+<br>
+<!-- CREATING A GRID LAYOUT WITH 3 COLUMNS A GAP SIZE OF 3-->
+  <div class="bg-green-500 w-auto grid grid-cols-3 gap-3">
+      <!-- EXAMPLE OF A COLUMN THAT SPANS 2 INSTEAD OF 1 -->
+      <div class="col-span-2 h-20 bg-red-100">1</div>
+      <div class="h-20 bg-red-200">2</div>
+      <div class="h-20 bg-red-300">3</div>
 
+      <div class="h-20 bg-red-400">4</div>
+      <div class="h-20 bg-red-500">5</div>
+      <div class="h-20 bg-red-600">6</div>
+
+      <div class="h-20 bg-red-700">7</div>
+      <div class="h-20 bg-red-800">8</div>
+      <!-- EXAMPLE OF A COLUMN THAT SPANS 3 INSTEAD OF 1 -->
+      <div class="col-span-3 h-20 bg-red-900">9</div>
+  </div>
+  <br>
+  <!-- CREATING A GRID LAYOUT WITH 5 ROWS W/ A GRID FLOW OF COLUMNS & A GAP SIZE OF 8-->
+  <div class="bg-red-500 w-auto grid grid-rows-5 grid-flow-col gap-8">
+    <div class="h-20 bg-blue-100">1</div>
+    <div class="h-20 bg-blue-200">2</div>
+    <div class="h-20 bg-blue-300">3</div>
+
+    <div class="h-20 bg-blue-400">4</div>
+    <div class="h-20 bg-blue-500">5</div>
+    <div class="h-20 bg-blue-600">6</div>
+
+    <div class="h-20 bg-blue-700">7</div>
+    <div class="h-20 bg-blue-800">8</div>
+    <div class="h-20 bg-blue-900">9</div>
+</div>
+<br>
+  <!-- CREATING A GRID LAYOUT WITH 5 COLUMNS W/ A GRID FLOW OF ROWS & A GAP SIZE OF 1-->
+  <div class="bg-green-500 w-auto grid grid-cols-5 grid-flow-row gap-1">
+    <div class="h-20 bg-yellow-100">1</div>
+    <div class="h-20 bg-yellow-200">2</div>
+    <div class="h-20 bg-yellow-300">3</div>
+
+    <div class="h-20 bg-yellow-400">4</div>
+    <div class="h-20 bg-yellow-500">5</div>
+    <div class="h-20 bg-yellow-600">6</div>
+
+    <div class="h-20 bg-yellow-700">7</div>
+    <div class="h-20 bg-yellow-800">8</div>
+    <div class="h-20 bg-yellow-900">9</div>
+</div>
+<br>
+<!-- CREATING A GRID LAYOUT WITH 5 COLUMNS W/ A GAP SIZE OF 2 BETWEEN EACH X-AXIS AND SIZE 4 FOR Y-AXIS AND JUSTIFYING ITEMS TO BE CENTERED-->
+<div class="bg-blue-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4 justify-items-center">
+  <div class="h-20 w-20 bg-green-100">1</div>
+  <div class="h-20 w-20 bg-green-200">2</div>
+  <div class="h-20 w-20 bg-green-300">3</div>
+
+  <div class="h-20 w-20 bg-green-400">4</div>
+  <div class="h-20 w-20 bg-green-500">5</div>
+  <div class="h-20 w-20 bg-green-600">6</div>
+
+  <div class="h-20 w-20 bg-green-700">7</div>
+  <div class="h-20 w-20 bg-green-800">8</div>
+  <div class="h-20 w-20 bg-green-900">9</div>
+</div>
+<br>
+  <!-- JUSTIFYING ITEMS SPECIFICALLY INSTEAD OF AS A WHOLE -->
+<div class="bg-red-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4">
+  <!-- USING JUSTIFY SELF TO SET THE SPECIFIC DIV TO WHAT YOU WANT ITS POSITION TO BE -->
+  <div class="h-20 w-20 bg-blue-100 justify-self-end">1</div>
+  <div class="h-20 w-20 bg-blue-200">2</div>
+  <div class="h-20 w-20 bg-blue-300">3</div>
+
+  <div class="h-20 w-20 bg-blue-400">4</div>
+  <div class="h-20 w-20 bg-blue-500">5</div>
+  <div class="h-20 w-20 bg-blue-600">6</div>
+
+  <!-- USING JUSTIFY-SELF-STRETCH TO MAKE THIS DIV SPAN THE ENTIRE WIDTH-->
+  <div class="h-20 bg-blue-700 justify-self-stretch">7</div>
+  <div class="h-20 w-20 bg-blue-800">8</div>
+  <div class="h-20 w-20 bg-blue-900">9</div>
+</div>
+<br>
+  <!-- SETTING THE MARGIN AND PADDING TO 10 -->
+  <div class="bg-blue-500 m-10 p-10">
+      <!-- SETTING THE PADDING TO 10 -->
+      <div class="bg-yellow-500 p-10">This is the inner div</div>
+  </div>
+  <br>
+  <!-- STYLING THE FONT SIZE TO BE LARGER AND WITH A THIN STYLING ALIGNED CENTER WITH A TEXT COLOR OF YELLOW AND OPACITY SET AT 80 ALL UPPERCASE https://tailwindcss.com/docs/font-weight -->
+  <div class="text-lg font-thin text-center text-yellow-600 text-opacity-80 uppercase">This is a heading!</div>
+  <br>  
+        <!-- CREATING A GREEN BUTTON W/ MARGIN OF 20 AND PADDING OF 5 THATS ROUNDED AND HAS A RED BORDER https://tailwindcss.com/docs/border-width -->
+      <button class="bg-green-500 m-20 p-5 rounded border-4 border-red-600">Click Here</button>
+<br>
+    <!-- ADDING A SHADOW TO THE BUTTON ELEMENT  -->
+  <button class="bg-blue-500 m-20 p-5 shadow-2xl">Click Here</button>
+    <!-- EXAMPLES OF RESPONSIVE BREAKPOINTS https://tailwindcss.com/docs/responsive-design#customizing-breakpoints-->
+    <!-- @2XL SCREEN SIZE TEXT WILL BE 4XL WHEN SMALLER WILL REVERT TO STANDARD SIZE, @XL SCREEN SIZE TEXT COLOR WILL BE YELLOW, FOR SCREEN SIZE LG, FOR SCREEN SIZES OF MD TEXT WILL BE GREEN, FOR SCREENS SMALLER THAN MD IT WILL BE DEFAULT TEXT COLOR OF WHITE -->
+    <h1 class="2xl:text-4xl xl:text-yellow-500 lg:text-red-500 md:text-green-500">Heading</h1>
+    <br>
+      <!-- EXAMPLE OF THE FONT SIZE CHANGING AT EACH SCREEN SIZE BREAK -->
+    <h1 class="2xl:text-8xl xl:text-4xl lg:text-2xl md:text-lg">Heading</h1>
+  <br>
+    <!-- EXAMPLE OF USING THE HOVER SUDO SELECTOR FOR BACKGROUND AND TEXT COLOR -->
+  <button class="bg-yellow-500 hover:bg-red-500 hover:text-blue-500">Click me</button>
+    <!-- USING A FOCUS INPUT -->
+    <input placeholder="Add Name" class="bg-gray-200 focus:bg-white">
+    <br>
+    <!-- IN THE PARENT DIV USE "GROUP" to  -->
+    <div class="group bg-red-500">
+      <div>
+        <!-- WHEN THE PARENT DIV IS HOVERED OVER THIS P TEXT COLOR WILL BE WHITE WILL BE BLACK -->
+        <p class="group hover:text-black">Paragraph 1</p>
+        <!-- WHEN THE PARENT DIV IS HOVERED OVER THIS P TEXT COLOR WILL BE WHITE WILL BE BLUE -->
+        <p class="group hover:text-blue-700">Paragraph 2</p>
+      </div>
+    </div>
+    <br>
+    <!-- EXAMPLE OF USING THE STYLESHEET TO STYLE THIS "a" tag green w/ a underline -->
+    <a href="">Click Here</a>
+    <br>
+    <!-- CREATING THE 'MENU-BUTTON' CLASS TO STYLE IN THE STYLE SHEET VIA COMPONENTS -->
+    <button class="menu-button">Click</button>
+    <br>
+<!-- EXAMPLE OF STYLING A UTILITY CLASS IN THE STYLE SHEET AT BLUE TO MODIFY THE ORIGINAL COLOR GREEN -->
+    <h1 class="text-green-500">HEADING EXAMPLE</h1>
+</body>
 </html>
